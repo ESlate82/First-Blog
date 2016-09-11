@@ -3,11 +3,32 @@
 <head>
   <title>Blog</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'application', 'http://fonts.googleapis.com/css?family=Raleway:400,700' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= favicon_link_tag 'consciousmind.jpg' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+    <div id="sidebar">
+        <div id="logo">
+            <%= link_to root_path do %>
+            <%= image_tag "inuredesignlogo.png" %>
+            <% end %>
+        </div>
+        
+       <ul>
+           <li class="category">Website</li>
+           <li><%= link_to "Blog", root_path %></li>
+           <li>About</li>
+       </ul> 
+       
+       <ul>
+           <li class="category">Social</li>
+           <li><a href="https://github.com/ESlate82">Github</a></li>
+           <li><a href="https://www.linkedin.com/in/eric-slayton-aa7b7730">LinkedIn</a></li>
+           <li><a href="mailto:e.slayton@hotmail.com">Email</a></li>
+       </ul>
+    </div>
 <%= yield %>
 
 </body>
